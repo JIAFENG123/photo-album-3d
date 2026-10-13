@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Realistic 3D Photo Album</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- 3D Canvas Host -->
+    <div id="canvas-container"></div>
+
+    <header class="header-bar">
+      <h1 class="brand-title">3D PHOTO ALBUM</h1>
+      <p class="brand-subtitle">写实三维拟真交互相册</p>
+    </header>
+
+    <div class="guide-pill">
+      💡 提示：按住书页向左/向右拖拽翻页（第一页往右可合上正面封面，最后一页往左可合上封底）；空白区域左键可 360° 旋转视角
+    </div>
+
+    <!-- Navigation Dock -->
+    <nav class="control-dock">
+      <button id="btn-prev" class="dock-btn" title="Previous Page / Close Front Cover">
+        ‹ 上一页
+      </button>
+
+      <span id="page-counter" class="page-badge">第 1 / 5 页</span>
+
+      <button id="btn-next" class="dock-btn primary" title="Next Page / Close Back Cover">
+        下一页 ›
+      </button>
+
+      <div class="dock-divider"></div>
+
+      <button id="btn-reset-view" class="dock-btn" title="Reset Camera View">
+        视角重置
+      </button>
+
+      <button id="btn-autoplay" class="dock-btn" title="Auto Play">
+        自动演示
+      </button>
+    </nav>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
